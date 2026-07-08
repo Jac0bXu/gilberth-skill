@@ -1,0 +1,554 @@
+[
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/accounts/",
+    "rel": "accounts",
+    "path": "content/accounts.md",
+    "section": "accounts"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/biography/",
+    "rel": "biography",
+    "path": "content/biography.md",
+    "section": "biography"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/compile/",
+    "rel": "compile",
+    "path": "content/compile.md",
+    "section": "compile"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/compile/compile_gpu/",
+    "rel": "compile/compile_gpu",
+    "path": "content/compile/compile_gpu.md",
+    "section": "compile"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/compile/compile_hybrid/",
+    "rel": "compile/compile_hybrid",
+    "path": "content/compile/compile_hybrid.md",
+    "section": "compile"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/compile/compile_intel_mkl/",
+    "rel": "compile/compile_intel_mkl",
+    "path": "content/compile/compile_intel_mkl.md",
+    "section": "compile"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/compile/compile_mpi/",
+    "rel": "compile/compile_mpi",
+    "path": "content/compile/compile_mpi.md",
+    "section": "compile"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/compile/compile_openmp/",
+    "rel": "compile/compile_openmp",
+    "path": "content/compile/compile_openmp.md",
+    "section": "compile"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/compile/compile_serial/",
+    "rel": "compile/compile_serial",
+    "path": "content/compile/compile_serial.md",
+    "section": "compile"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/faqs/",
+    "rel": "faqs",
+    "path": "content/faqs.md",
+    "section": "faqs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/gateway/",
+    "rel": "gateway",
+    "path": "content/gateway.md",
+    "section": "gateway"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/gateway/cluster_tools/",
+    "rel": "gateway/cluster_tools",
+    "path": "content/gateway/cluster_tools.md",
+    "section": "gateway"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/gateway/files/",
+    "rel": "gateway/files",
+    "path": "content/gateway/files.md",
+    "section": "gateway"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/gateway/interactive/desktop/",
+    "rel": "gateway/interactive/desktop",
+    "path": "content/gateway/interactive/desktop.md",
+    "section": "gateway"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/gateway/interactive/matlab/",
+    "rel": "gateway/interactive/matlab",
+    "path": "content/gateway/interactive/matlab.md",
+    "section": "gateway"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/gateway/interactive/notebook/",
+    "rel": "gateway/interactive/notebook",
+    "path": "content/gateway/interactive/notebook.md",
+    "section": "gateway"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/gateway/interactive/rstudio/",
+    "rel": "gateway/interactive/rstudio",
+    "path": "content/gateway/interactive/rstudio.md",
+    "section": "gateway"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/gateway/interactive_apps/",
+    "rel": "gateway/interactive_apps",
+    "path": "content/gateway/interactive_apps.md",
+    "section": "gateway"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/gateway/jobs/",
+    "rel": "gateway/jobs",
+    "path": "content/gateway/jobs.md",
+    "section": "gateway"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/overview/",
+    "rel": "overview",
+    "path": "content/overview.md",
+    "section": "overview"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/",
+    "rel": "run_jobs",
+    "path": "content/run_jobs.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/ansysfluent/calculating/",
+    "rel": "run_jobs/ansysfluent/calculating",
+    "path": "content/run_jobs/ansysfluent/calculating.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/ansysfluent/preparing_cases/",
+    "rel": "run_jobs/ansysfluent/preparing_cases",
+    "path": "content/run_jobs/ansysfluent/preparing_cases.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/ansysfluent/submit_jobs/",
+    "rel": "run_jobs/ansysfluent/submit_jobs",
+    "path": "content/run_jobs/ansysfluent/submit_jobs.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/ansysfluent/tui_journal/",
+    "rel": "run_jobs/ansysfluent/tui_journal",
+    "path": "content/run_jobs/ansysfluent/tui_journal.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/ansysfluent_example/",
+    "rel": "run_jobs/ansysfluent_example",
+    "path": "content/run_jobs/ansysfluent_example.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/apptainer_example/",
+    "rel": "run_jobs/apptainer_example",
+    "path": "content/run_jobs/apptainer_example.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/cancelling_job/",
+    "rel": "run_jobs/cancelling_job",
+    "path": "content/run_jobs/cancelling_job.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/checking_output/",
+    "rel": "run_jobs/checking_output",
+    "path": "content/run_jobs/checking_output.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/creating_the_submission_script/",
+    "rel": "run_jobs/creating_the_submission_script",
+    "path": "content/run_jobs/creating_the_submission_script.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/directives/",
+    "rel": "run_jobs/directives",
+    "path": "content/run_jobs/directives.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/",
+    "rel": "run_jobs/examples",
+    "path": "content/run_jobs/examples.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/example_installing_r_packages/",
+    "rel": "run_jobs/examples/example_installing_r_packages",
+    "path": "content/run_jobs/examples/example_installing_r_packages.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/example_loading_into_r/",
+    "rel": "run_jobs/examples/example_loading_into_r",
+    "path": "content/run_jobs/examples/example_loading_into_r.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/example_python_job/",
+    "rel": "run_jobs/examples/example_python_job",
+    "path": "content/run_jobs/examples/example_python_job.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/example_r_profile_setup/",
+    "rel": "run_jobs/examples/example_r_profile_setup",
+    "path": "content/run_jobs/examples/example_r_profile_setup.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/example_rstudio/",
+    "rel": "run_jobs/examples/example_rstudio",
+    "path": "content/run_jobs/examples/example_rstudio.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/example_running_r_jobs/",
+    "rel": "run_jobs/examples/example_running_r_jobs",
+    "path": "content/run_jobs/examples/example_running_r_jobs.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/python_conda/",
+    "rel": "run_jobs/examples/python_conda",
+    "path": "content/run_jobs/examples/python_conda.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/python_env_example/",
+    "rel": "run_jobs/examples/python_env_example",
+    "path": "content/run_jobs/examples/python_env_example.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/python_numpy/",
+    "rel": "run_jobs/examples/python_numpy",
+    "path": "content/run_jobs/examples/python_numpy.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/python_packages/",
+    "rel": "run_jobs/examples/python_packages",
+    "path": "content/run_jobs/examples/python_packages.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/python_pip/",
+    "rel": "run_jobs/examples/python_pip",
+    "path": "content/run_jobs/examples/python_pip.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/examples/python_source/",
+    "rel": "run_jobs/examples/python_source",
+    "path": "content/run_jobs/examples/python_source.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/gaussian_example/",
+    "rel": "run_jobs/gaussian_example",
+    "path": "content/run_jobs/gaussian_example.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/generic_slurm_jobs/",
+    "rel": "run_jobs/generic_slurm_jobs",
+    "path": "content/run_jobs/generic_slurm_jobs.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/gpu_jobs/",
+    "rel": "run_jobs/gpu_jobs",
+    "path": "content/run_jobs/gpu_jobs.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/gpu_usage_monitoring/",
+    "rel": "run_jobs/gpu_usage_monitoring",
+    "path": "content/run_jobs/gpu_usage_monitoring.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/holding_job/",
+    "rel": "run_jobs/holding_job",
+    "path": "content/run_jobs/holding_job.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/interactive_jobs/",
+    "rel": "run_jobs/interactive_jobs",
+    "path": "content/run_jobs/interactive_jobs.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/job_dependencies/",
+    "rel": "run_jobs/job_dependencies",
+    "path": "content/run_jobs/job_dependencies.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/learning/customml/",
+    "rel": "run_jobs/learning/customml",
+    "path": "content/run_jobs/learning/customml.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/learning/ml_batch/",
+    "rel": "run_jobs/learning/ml_batch",
+    "path": "content/run_jobs/learning/ml_batch.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/matlab/implicit_parallelism/",
+    "rel": "run_jobs/matlab/implicit_parallelism",
+    "path": "content/run_jobs/matlab/implicit_parallelism.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/matlab/interpreter/",
+    "rel": "run_jobs/matlab/interpreter",
+    "path": "content/run_jobs/matlab/interpreter.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/matlab/mdcs_parallel/",
+    "rel": "run_jobs/matlab/mdcs_parallel",
+    "path": "content/run_jobs/matlab/mdcs_parallel.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/matlab/parfor/",
+    "rel": "run_jobs/matlab/parfor",
+    "path": "content/run_jobs/matlab/parfor.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/matlab/profile_manager/",
+    "rel": "run_jobs/matlab/profile_manager",
+    "path": "content/run_jobs/matlab/profile_manager.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/matlab/spmd/",
+    "rel": "run_jobs/matlab/spmd",
+    "path": "content/run_jobs/matlab/spmd.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/matlab_example/",
+    "rel": "run_jobs/matlab_example",
+    "path": "content/run_jobs/matlab_example.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/monitoring_job/",
+    "rel": "run_jobs/monitoring_job",
+    "path": "content/run_jobs/monitoring_job.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/monitoring_resources/",
+    "rel": "run_jobs/monitoring_resources",
+    "path": "content/run_jobs/monitoring_resources.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/mpi_jobs/",
+    "rel": "run_jobs/mpi_jobs",
+    "path": "content/run_jobs/mpi_jobs.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/multiple_node/",
+    "rel": "run_jobs/multiple_node",
+    "path": "content/run_jobs/multiple_node.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/openmp_jobs/",
+    "rel": "run_jobs/openmp_jobs",
+    "path": "content/run_jobs/openmp_jobs.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/python_example/",
+    "rel": "run_jobs/python_example",
+    "path": "content/run_jobs/python_example.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/queues/",
+    "rel": "run_jobs/queues",
+    "path": "content/run_jobs/queues.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/r_example/",
+    "rel": "run_jobs/r_example",
+    "path": "content/run_jobs/r_example.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/serial_jobs/",
+    "rel": "run_jobs/serial_jobs",
+    "path": "content/run_jobs/serial_jobs.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/simple_job/",
+    "rel": "run_jobs/simple_job",
+    "path": "content/run_jobs/simple_job.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/run_jobs/submit_script/",
+    "rel": "run_jobs/submit_script",
+    "path": "content/run_jobs/submit_script.md",
+    "section": "run_jobs"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/software/",
+    "rel": "software",
+    "path": "content/software.md",
+    "section": "software"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/",
+    "rel": "storage",
+    "path": "content/storage.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/archive_and_compression/",
+    "rel": "storage/archive_and_compression",
+    "path": "content/storage/archive_and_compression.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/environment_variables/",
+    "rel": "storage/environment_variables",
+    "path": "content/storage/environment_variables.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/ftp_sftp/",
+    "rel": "storage/ftp_sftp",
+    "path": "content/storage/ftp_sftp.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/globus/",
+    "rel": "storage/globus",
+    "path": "content/storage/globus.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/home_directory/",
+    "rel": "storage/home_directory",
+    "path": "content/storage/home_directory.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/hsi/",
+    "rel": "storage/hsi",
+    "path": "content/storage/hsi.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/htar/",
+    "rel": "storage/htar",
+    "path": "content/storage/htar.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/long_term_storage/",
+    "rel": "storage/long_term_storage",
+    "path": "content/storage/long_term_storage.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/recover/",
+    "rel": "storage/recover",
+    "path": "content/storage/recover.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/recover/flost/",
+    "rel": "storage/recover/flost",
+    "path": "content/storage/recover/flost.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/recover/mac/",
+    "rel": "storage/recover/mac",
+    "path": "content/storage/recover/mac.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/recover/manual/",
+    "rel": "storage/recover/manual",
+    "path": "content/storage/recover/manual.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/recover/windows/",
+    "rel": "storage/recover/windows",
+    "path": "content/storage/recover/windows.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/scp/",
+    "rel": "storage/scp",
+    "path": "content/storage/scp.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/scratch_space/",
+    "rel": "storage/scratch_space",
+    "path": "content/storage/scratch_space.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/sharing/",
+    "rel": "storage/sharing",
+    "path": "content/storage/sharing.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/storage_quota/",
+    "rel": "storage/storage_quota",
+    "path": "content/storage/storage_quota.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/tmp_directory/",
+    "rel": "storage/tmp_directory",
+    "path": "content/storage/tmp_directory.md",
+    "section": "storage"
+  },
+  {
+    "url": "https://docs.rcac.purdue.edu/userguides/gilbreth/storage/windows_network_drive/",
+    "rel": "storage/windows_network_drive",
+    "path": "content/storage/windows_network_drive.md",
+    "section": "storage"
+  }
+]

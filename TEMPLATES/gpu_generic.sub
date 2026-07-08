@@ -1,0 +1,42 @@
+#!/bin/bash
+# =============================================================================
+# Gilbreth generic GPU job template (fill in the <...> placeholders)
+# Satisfies all Gilbreth-mandatory flags and gotchas G1,G2,G4,G7,G8,G10,G11.
+# Workload-specific tweaks: see PLAYBOOKS/<workload>.md
+# =============================================================================
+#SBATCH --job-name=<name>
+#SBATCH --output=/home/%u/logs/%x-%j.out          # %u=user %x=jobname %j=jobid (mkdir the dir!)
+#SBATCH --error=/home/%u/logs/%x-%j.err
+#SBATCH -A <account>                              # REQUIRED — your Slurm account
+#SBATCH --partition=<a10|a30|a100-40gb|a100-80gb|h100|training>   # G12: by GPU mem
+#SBATCH --qos=<normal|standby|training>           # G4: standby caps at 4h
+#SBATCH --gpus-per-node=<1|2|4>                   # REQUIRED on Gilbreth (G11)
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=<4-16>                    # match dataloader/parallel workers
+#SBATCH --mem=<40-120>G                           # explicit; DefMemPerCPU is only ~7GB
+#SBATCH --time=<HH:MM:SS>                         # realistic; standby max 04:00:00 (G4)
+#SBATCH --mail-type=END,FAIL
+
+set -euo pipefail
+
+# --- modules: external MUST precede conda/anaconda (G1); purge needs full restore (G2) ---
+module purge
+module load rcac external gcc openmpi cuda/12.6.0 conda/2026.03
+conda activate "<your-env-path>"                  # e.g. $SCRATCH/conda_envs/myenv
+
+# --- storage hygiene (G7 cross-device link; G8 bus error on full scratch) ---
+export PIP_CACHE_DIR=$SCRATCH/pip_cache
+export TMPDIR=$SCRATCH/tmp
+mkdir -p "$PIP_CACHE_DIR" "$TMPDIR" /home/$USER/logs
+export TOKENIZERS_PARALLELISM=false               # silence noisy warning
+export HF_HOME=$SCRATCH/hf_cache; mkdir -p "$HF_HOME"
+
+cd "$SLURM_SUBMIT_DIR"                            # deterministic working dir
+
+# --- smoke test: fail in 10s, not hours (G10) ---
+nvidia-smi
+python -c "import torch;print('torch',torch.__version__,'cuda',torch.cuda.is_available(),torch.cuda.get_device_name(0))"
+
+# --- the actual work ---
+<your-command-here>

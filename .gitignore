@@ -1,0 +1,9 @@
+# graphify regenerables (keep graph.json/graph.html/GRAPH_REPORT.md — they're the skill's query layer)
+graphify-out/cache/
+graphify-out/.graphify_chunk_*.json
+graphify-out/.docfiles.json
+
+# OS / editor
+.DS_Store
+*.swp
+__pycache__/
