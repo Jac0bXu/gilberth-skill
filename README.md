@@ -24,21 +24,23 @@ knowledge graph** (`graphify-out/`).
 
 ## Installation
 
-### Option A — as a Claude Code skill (recommended)
+### Option A — as a Claude Code **or** Codex skill (recommended)
+Both agents use the same convention — a `<name>/SKILL.md` folder in their skills directory.
 From this repo's directory:
 ```bash
-ln -s "$(pwd)" ~/.claude/skills/gilbreth
+ln -s "$(pwd)" ~/.claude/skills/gilbreth      # Claude Code
+ln -s "$(pwd)" ~/.codex/skills/gilbreth       # Codex CLI (same SKILL.md format)
 ```
-That's it. Claude Code auto-discovers the skill; its `description` triggers on Gilbreth tasks
-(login, Slurm jobs, GPU partitions, conda/modules, storage, the gateway, …). Verify:
+The agent auto-discovers the skill; its `description` triggers on Gilbreth tasks (login, Slurm
+jobs, GPU partitions, conda/modules, storage, the gateway, …). Verify:
 ```bash
-ls -l ~/.claude/skills/gilbreth   # -> symlink to this repo
+ls -l ~/.claude/skills/gilbreth ~/.codex/skills/gilbreth   # -> symlinks to this repo
 ```
-To remove: `rm ~/.claude/skills/gilbreth`.
+To remove: `rm ~/.claude/skills/gilbreth ~/.codex/skills/gilbreth`.
 
 ### Option B — copy (no symlink)
 ```bash
-cp -r gilberth-skill ~/.claude/skills/gilbreth
+cp -r gilberth-skill ~/.claude/skills/gilbreth      # and/or ~/.codex/skills/gilbreth
 ```
 
 ### Option C — use the files directly (any agent/editor)

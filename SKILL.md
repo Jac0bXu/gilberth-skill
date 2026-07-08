@@ -24,6 +24,13 @@ answer any "how do I use Gilbreth?" question. It layers five things the raw docs
 4. **Templates + preflight** — copy-paste scripts and a "will it run?" gate (`TEMPLATES/`, `PREFLIGHT.md`)
 5. **The doc corpus + a knowledge graph** — `content/` (92 pages) and `graphify-out/`
 
+> **Paths (read first):** this skill lives at `/home/ubuntu/Documents/GitHub/gilberth-skill`
+> (the directory holding this `SKILL.md`). The knowledge graph is at
+> `<skill>/graphify-out/graph.json`. `graphify` resolves the graph **relative to your CWD**, so when
+> you're working in any *other* project, pass `--graph /home/ubuntu/Documents/GitHub/gilberth-skill/graphify-out/graph.json`
+> (or `cd` into the skill dir first). Read all referenced files (`GOTCHAS.md`, `PLAYBOOKS/*`, `content/*`)
+> relative to that same skill dir.
+
 ## What Gilbreth is (quick facts — verified live 2026-07-08)
 
 - **GPU community cluster** for ML / GPU-intensive work. Cards: **A10, A30 (24 GB), A100 (40 & 80 GB), H100**.
@@ -78,7 +85,7 @@ proposes a `## G??` gotcha block. Review it, assign the next G-number, and appen
 Answer from these in priority order:
 1. **`DYNAMIC/cluster_snapshot.md`** for current modules/limits/partitions/QOS (the truth).
 2. **`GOTCHAS.md`** if it's a "why did this fail / will this break" question.
-3. **`graphify query "<question>"`** over the knowledge graph for concept relationships (cites `src=` files).
+3. **`graphify query "<question>" --graph <skill>/graphify-out/graph.json`** over the knowledge graph for concept relationships (cites `src=` files). Use the `--graph` flag so it works from any CWD.
 4. **`content/`** for verbatim commands/code/tables (`grep -ril "<term>" content/`).
 
 ---
@@ -88,12 +95,12 @@ Answer from these in priority order:
 | Layer | File(s) | Use it for |
 |---|---|---|
 | ★ Playbooks | `PLAYBOOKS/*.md` | Best way to run a workload (start here for a task) |
-| ★ Gotchas | `GOTCHAS.md` | Failure-prevention rules (G1…G13) |
+| ★ Gotchas | `GOTCHAS.md` | Failure-prevention rules (G1…G14) |
 | ★ Live snapshot | `DYNAMIC/cluster_snapshot.md` | Current modules, limits, partitions, QOS |
 | ★ Templates | `TEMPLATES/*.sub` | Copy-paste job scripts |
 | ★ Preflight | `PREFLIGHT.md` | "Will it run?" checklist + `sbatch --test-only` |
 | Doc corpus | `content/` (92 pp, `INDEX.md`) | Verbatim docs — exact commands/tables/code |
-| Knowledge graph | `graphify-out/` | `graphify query/path/explain` (318 nodes, 25 communities) |
+| Knowledge graph | `graphify-out/graph.json` | `graphify query/path/explain` (393 nodes, 32 communities) — pass `--graph <skill>/graphify-out/graph.json` from other CWDs |
 
 Doc corpus sections: `overview`, `accounts`, `software`, `faqs`, `run_jobs/` (51), `storage/` (20),
 `gateway/` (9), `compile/` (7), `biography`. See `INDEX.md` for every page.
