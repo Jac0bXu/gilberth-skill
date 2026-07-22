@@ -1,0 +1,53 @@
+#!/bin/bash
+# =============================================================================
+# Gilbreth vLLM two-GPU tensor-parallel OpenAI API server template.
+#
+# Use for serving one LLM across two GPUs on one node, for example Qwen3-32B on
+# two A100-40GB GPUs. This is tensor parallelism inside one vLLM server process.
+# =============================================================================
+#SBATCH --job-name=vllm-tp2
+#SBATCH --output=/home/%u/logs/%x-%j.out
+#SBATCH --error=/home/%u/logs/%x-%j.err
+#SBATCH -A <account>
+#SBATCH --partition=a100-40gb
+#SBATCH --qos=normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gpus-per-node=2
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=160G
+#SBATCH --time=12:00:00
+#SBATCH --mail-type=END,FAIL
+
+set -euo pipefail
+
+MODEL="${MODEL:-Qwen/Qwen3-32B}"
+PORT="${PORT:-8000}"
+TP_SIZE="${TP_SIZE:-2}"
+
+module purge
+module load rcac external gcc openmpi cuda/12.6.0 conda/2026.03
+conda activate "<your-vllm-env-path>"
+
+mkdir -p "/home/$USER/logs" "$SCRATCH/tmp" "$SCRATCH/hf_cache" "$SCRATCH/vllm_cache"
+export TMPDIR="$SCRATCH/tmp"
+export HF_HOME="$SCRATCH/hf_cache"
+export VLLM_CACHE_ROOT="$SCRATCH/vllm_cache"
+export TOKENIZERS_PARALLELISM=false
+
+cd "$SLURM_SUBMIT_DIR"
+
+echo "job=$SLURM_JOB_ID host=$(hostname) model=$MODEL tp=$TP_SIZE port=$PORT"
+nvidia-smi
+python -c "import torch, vllm; print('torch', torch.__version__, 'vllm', vllm.__version__, 'cuda', torch.cuda.is_available(), 'gpus', torch.cuda.device_count())"
+
+# Single-node tensor parallel: request two GPUs from Slurm, but launch one vLLM
+# server process. Do not use torchrun or srun -n 2 for this pattern.
+export CUDA_VISIBLE_DEVICES=0,1
+python -m vllm.entrypoints.openai.api_server \
+  --host 0.0.0.0 \
+  --port "$PORT" \
+  --model "$MODEL" \
+  --tensor-parallel-size "$TP_SIZE" \
+  --enable-auto-tool-choice \
+  --tool-call-parser qwen3_xml

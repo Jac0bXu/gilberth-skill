@@ -1,192 +1,227 @@
-# Graph Report - .  (2026-07-08)
+# Graph Report - /home/ubuntu/Documents/GitHub/gilberth-skill  (2026-07-08)
 
 ## Corpus Check
-- 114 files · ~51,233 words
+- 115 files · ~52,489 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 393 nodes · 500 edges · 32 communities (19 shown, 13 thin omitted)
-- Extraction: 87% EXTRACTED · 13% INFERRED · 0% AMBIGUOUS · INFERRED: 64 edges (avg confidence: 0.81)
+- 318 nodes · 395 edges · 61 communities (21 shown, 40 thin omitted)
+- Extraction: 85% EXTRACTED · 15% INFERRED · 0% AMBIGUOUS · INFERRED: 60 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- File Storage & Transfer
-- Live Snapshot, Modules & Gotchas
-- Cluster Overview & Hardware
-- Access & Authentication
-- Partitions & OpenMP Job Types
-- Compiling & Toolchains
-- Python/Conda Environments
-- MATLAB Parallel & Python
-- Ansys Fluent (CFD)
-- R / Statistics
-- Implicit Parallelism & Threading
-- MPI Jobs
-- FAQ & GPU Selection
-- Gaussian & GPU Monitoring
-- Capture Swarm Script
-- Windows Shares & Snapshots
-- Job Control & Dependencies
-- Failure-Learning Helper
-- Interactive & Generic Jobs
-- Job Status Checking
-- Windows File Recovery
-- vLLM Serving
-- Biography (namesake)
-- R Runtime
-- Globus Endpoint
-- CUDA Module
-- A10 Partition
-- A100-40GB Partition
-- A30 Partition
-- Training Partition
-- Training QOS
-- RCAC Module
+- Playbooks Conda Open
+- Storage Home Scratch
+- Content Gpu Gilbreth
+- Gateway Interactive Fix
+- Dynamic Gilbreth Partition
+- Jobs Slurm Submission
+- Content Job Sbatch
+- Jobs Packages Conda
+- Content Programs Compiling
+- Jobs Fluent Journal
+- Content Compiling Open
+- Provenance Extract Workflow
+- Provenance Workflow Capture
+- Content Storage Smb
+- Jobs Ansys Fluent
+- Jobs Matlab Parallel
+- Content Ssh Accounts
+- Content Directives Job
+- Content Gres Gpu
+- Bin Learn Failure
+- Content Ansys Example
+- Content Apptainer Container
+- Content Job Load
+- Jobs Mkl Omp
+- Dynamic Preemption Requeue
+- Content Nvlink Gilbreth
+- Content Node Gilbreth
+- Content Node Nvidia
+- Content Node Nvidia
+- Content Normal Priority
+- Content Training Gilbreth
+- Content Hour Priority
+- Content Overview Gilbreth
+- Dynamic Lmod Hierarchical
+- Dynamic Cards Partition
+- Dynamic Partition
+- Dynamic Cpu Gilbreth
+- Dynamic Pool Shared
+- Dynamic Qos Walltime
+- Playbooks Flag Bind
+- Playbooks Ansys
+- Playbooks Journal Tui
+- Playbooks Gaussian
+- Playbooks Wrapper Subg
+- Playbooks Sinteractive Command
+- Playbooks Directive Array
+- Playbooks Batch Matlab
+- Playbooks Node Dcs
+- Playbooks Parfor Toolbox
+- Playbooks Pattern Serving
+- Playbooks Band Gbps
+- Playbooks Mod Env
+- Playbooks Privatemodules Use
+- Playbooks Libs User
+- Playbooks Globus Transfer
+- Playbooks Gpfs Quota
+- Playbooks Myquota Command
+- Playbooks Sftp Scp
+- Sbatch Only
+- Checks
+- Learn Loop Failure
 
 ## God Nodes (most connected - your core abstractions)
-1. `Preflight — Script Verification Checklist` - 16 edges
-2. `Playbooks index (README)` - 15 edges
-3. `Playbook — ML / Deep-Learning Training` - 14 edges
-4. `Frequently Asked Questions - Gilbreth` - 11 edges
-5. `Accounts on Gilbreth` - 10 edges
-6. `Slurm accounts, partitions, and QOS options` - 10 edges
-7. `Playbook — Python / Conda Environments` - 9 edges
-8. `Running jobs` - 9 edges
-9. `Ansys Fluent - RCAC Documentation` - 9 edges
-10. `File Storage and Transfer` - 9 edges
+1. `Preflight Verification Checklist` - 23 edges
+2. `Playbooks README (index)` - 16 edges
+3. `G1: external before conda (cannot be loaded as requested)` - 14 edges
+4. `Playbook — ML / DL Training` - 14 edges
+5. `File Storage and Transfer` - 14 edges
+6. `Gilbreth Live Cluster Snapshot` - 11 edges
+7. `G2: module purge wipes needed defaults` - 11 edges
+8. `Gilbreth Overview` - 10 edges
+9. `Playbook — Job Arrays` - 9 edges
+10. `Playbook — Python / Conda` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `G5 — dependency chain kills downstream jobs` --conceptually_related_to--> `Playbook — Slurm Job Arrays`  [INFERRED]
-  GOTCHAS.md → PLAYBOOKS/job_arrays.md
-- `gilberth-skill README` --references--> `Gilbreth Skill entry point (SKILL.md)`  [EXTRACTED]
-  README.md → SKILL.md
-- `Gilbreth Skill entry point (SKILL.md)` --references--> `Gilbreth Live Cluster Snapshot`  [EXTRACTED]
-  SKILL.md → DYNAMIC/cluster_snapshot.md
-- `Gilbreth Skill entry point (SKILL.md)` --references--> `Gilbreth Skill Page Index`  [EXTRACTED]
-  SKILL.md → INDEX.md
-- `Playbook — Ansys Fluent (CFD)` --references--> `Preflight — Script Verification Checklist`  [EXTRACTED]
-  PLAYBOOKS/cfd_fluent.md → PREFLIGHT.md
+- `G11: --gpus-per-node required on GPU jobs` --semantically_similar_to--> `Compiling GPU/CUDA (nvcc)`  [INFERRED] [semantically similar]
+  GOTCHAS.md → content/compile.md
+- `G3: Intel/MKL default toolchain is stale` --references--> `Gilbreth Live Cluster Snapshot`  [EXTRACTED]
+  GOTCHAS.md → DYNAMIC/cluster_snapshot.md
+- `Playbook — Job Arrays` --references--> `MaxArraySize 1001 (Slurm limit)`  [EXTRACTED]
+  PLAYBOOKS/job_arrays.md → DYNAMIC/cluster_snapshot.md
+- `Playbook — Ansys Fluent (CFD)` --references--> `DefMemPerCPU 7168 MB`  [INFERRED]
+  PLAYBOOKS/cfd_fluent.md → DYNAMIC/cluster_snapshot.md
+- `Playbook — MPI / Multi-node & OpenMP` --references--> `Compiling MPI (mpicc/mpif90/mpiicc)`  [INFERRED]
+  PLAYBOOKS/mpi.md → content/compile.md
 
 ## Import Cycles
 - None detected.
 
 ## Hyperedges (group relationships)
-- **GPU partition/QOS selection by model size** — playbooks_ml_training, dynamic_cluster_snapshot_partition_a100_80gb, gotchas_g12_gpu_mem_fit_card, gotchas_g4_standby_4h_timeout [EXTRACTED 1.00]
-- **Mandatory module load order (external before conda, restore after purge)** — gotchas_g1_external_before_conda, gotchas_g2_purge_wipes_stack, dynamic_cluster_snapshot_external, dynamic_cluster_snapshot_rcac [EXTRACTED 1.00]
-- **Preflight A/B/C verification gate** — preflight, preflight_sbatch_test_only, preflight_smoke_test, gotchas_g10_command_not_found [EXTRACTED 1.00]
-- **MPI compiler wrappers (mpicc/mpiicc across OpenMPI and Intel MPI)** — content_compile_openmpi, content_compile_impi, content_compile_mpicc, content_compile_mpiicc [INFERRED 0.85]
-- **Gateway interactive apps launched on compute nodes** — content_gateway_interactive_desktop_novnc, content_gateway_interactive_matlab_app, content_gateway_interactive_notebook_app, content_gateway_interactive_rstudio_app [INFERRED 0.85]
-- **Gilbreth GPU partition types selectable via Slurm** — content_faqs_a10_gpu, content_faqs_a30_gpu, content_faqs_a100_40gb_gpu, content_faqs_a100_80gb_gpu, content_faqs_h100_gpu [INFERRED 0.85]
-- **SLURM batch job submission lifecycle (script -> submit -> monitor -> output -> cancel)** — content_run_jobs_creating_the_submission_script, content_run_jobs_directives, content_run_jobs_sbatch, content_run_jobs_checking_output, content_run_jobs_cancelling_job [INFERRED 0.85]
-- **Ansys Fluent CFD workflow (Workbench -> geometry -> mesh -> case -> journal -> SLURM job)** — content_run_jobs_ansysfluent_preparing_cases, content_run_jobs_ansysfluent_calculating, content_run_jobs_ansysfluent_tui_journal, content_run_jobs_ansysfluent_submit_jobs [EXTRACTED 1.00]
-- **R environment setup workflow (.Rprofile -> module load r -> install.packages -> run job)** — content_run_jobs_examples_example_r_profile_setup, content_run_jobs_examples_example_installing_r_packages, content_run_jobs_examples_example_running_r_jobs, content_run_jobs_examples_example_loading_into_r [INFERRED 0.75]
-- **conda-env-mod create-load-install workflow** — content_run_jobs_examples_python_env_example_conda_env_mod, content_run_jobs_examples_python_env_example_use_own, content_run_jobs_examples_python_conda_module_conda, content_run_jobs_examples_python_packages_conda_env_mod_script [INFERRED 0.85]
-- **MATLAB parallel computing stack (implicit + parfor + DCS)** — content_run_jobs_matlab_implicit_parallelism_singlecompthread, content_run_jobs_matlab_parfor_parfor, content_run_jobs_matlab_mdcs_parallel_dcs, content_run_jobs_matlab_interpreter_module_matlab [INFERRED 0.85]
-- **Custom ML GPU batch job flow (conda-env-mod + cuda + sbatch)** — content_run_jobs_learning_customml_tensorflow, content_run_jobs_learning_ml_batch_sbatch, content_run_jobs_gpu_jobs_cuda, content_run_jobs_examples_python_env_example_conda_env_mod [INFERRED 0.75]
-- **Slurm GPU submission flow (partition + QOS + gpus-per-node)** — content_run_jobs_submit_script, content_run_jobs_queues, content_run_jobs_simple_job_gpus_per_node, content_run_jobs_queues_normal_qos [INFERRED 0.85]
-- **MATLAB parallel execution stack (PCT + DCS + cluster profile)** — content_run_jobs_matlab_spmd_parallel_computing_toolbox, content_run_jobs_matlab_spmd_distributed_computing_server, content_run_jobs_matlab_profile_manager_cluster_profile [INFERRED 0.85]
-- **MPI multi-node submission pattern (srun + nodes + ntasks)** — content_run_jobs_mpi_jobs_srun, content_run_jobs_multiple_node_slurm_job_nodelist, content_run_jobs_multiple_node_cpus_per_task [INFERRED 0.75]
-- **Fortress HPSS archive transfer interfaces (hsi, htar, Globus)** — content_storage_long_term_storage_fortress, content_storage_hsi_hsi_command, content_storage_htar_htar_command, content_storage_globus_globus [INFERRED 0.85]
-- **Lost file recovery methods (flost, Mac, Windows, manual)** — content_storage_recover_flost_flost_command, content_storage_recover_mac_ssh, content_storage_recover_windows_previous_versions, content_storage_recover_manual_snapshots_dir, content_storage_recover_snapshot_policy [INFERRED 0.85]
-- **Gilbreth storage tiers (home, scratch, tmp, Fortress)** — content_storage_home_directory_home_directory, content_storage_scratch_space_scratch_directory, content_storage_tmp_directory_tmp, content_storage_long_term_storage_fortress [INFERRED 0.85]
+- **Advisor Protocol: classify→playbook→gotchas→template→preflight** — skill_advisor_protocol, playbooks_readme, gotchas, preflight [INFERRED 0.95]
+- **Correct module load order (external→conda→activate) across all GPU playbooks** — dynamic_cluster_snapshot_external_prerequisite, dynamic_cluster_snapshot_default_toolchain, gotchas_g1, gotchas_g2 [INFERRED 0.95]
+- **GPU partition + QOS selection by model size and runtime** — dynamic_cluster_snapshot_partition_a100_80gb, dynamic_cluster_snapshot_qos_normal, dynamic_cluster_snapshot_qos_standby, gotchas_g4, gotchas_g12 [INFERRED 0.85]
+- **Compilation toolchain (serial/mpi/openmp/hybrid/gpu)** — content_compile_compile_serial, content_compile_compile_mpi, content_compile_compile_openmp, content_compile_compile_hybrid, content_compile_compile_gpu [INFERRED 0.85]
+- **Open OnDemand interactive app suite** — content_gateway_interactive_desktop, content_gateway_interactive_matlab, content_gateway_interactive_notebook, content_gateway_interactive_rstudio [INFERRED 0.85]
+- **Fluent CFD workflow (prepare->calculate->journal->submit)** — content_run_jobs_ansysfluent_preparing_cases, content_run_jobs_ansysfluent_calculating, content_run_jobs_ansysfluent_tui_journal, content_run_jobs_ansysfluent_submit_jobs [INFERRED 0.85]
+- **Python package management workflow on Gilbreth** — content_run_jobs_examples_python_packages, content_run_jobs_examples_python_conda, content_run_jobs_examples_python_env_example_conda_env_mod [INFERRED 0.85]
+- **R workflow on Gilbreth (.Rprofile, install, load, run)** — content_run_jobs_examples_example_r_profile_setup, content_run_jobs_examples_example_installing_r_packages, content_run_jobs_examples_example_running_r_jobs [INFERRED 0.85]
+- **SLURM job submission patterns (script, directives, GPU)** — content_run_jobs_creating_the_submission_script, content_run_jobs_directives, content_run_jobs_gpu_jobs [INFERRED 0.75]
+- **MATLAB parallel execution stack (interpreter + PCT + DCS + Cluster Profile)** — content_run_jobs_matlab_interpreter_m_script, content_run_jobs_matlab_parfor_parfor_job, content_run_jobs_matlab_profile_manager_cluster_profile_manager [INFERRED 0.85]
+- **Gilbreth GPU partitions (a10/a30/a100-40gb/a100-80gb/training)** — content_run_jobs_queues_a10_partition, content_run_jobs_queues_a30_partition, content_run_jobs_queues_a100_80gb_partition [INFERRED 0.85]
+- **Gilbreth Quality-of-Service tiers (normal/standby/training)** — content_run_jobs_queues_normal_qos, content_run_jobs_queues_standby_qos, content_run_jobs_queues_training_qos [INFERRED 0.85]
+- **Fortress archival transfer tools** — content_storage_long_term_storage_fortress, content_storage_hsi, content_storage_htar [INFERRED 0.85]
+- **sbatch GPU job submission option set** — content_run_jobs_submit_script_sbatch, content_run_jobs_submit_script_account_partition, content_run_jobs_submit_script_walltime [INFERRED 0.85]
+- **Lost file recovery methods** — content_storage_recover_flost, content_storage_recover_manual, content_storage_recover_windows [INFERRED 0.85]
+- **SMB-based access to Gilbreth storage tiers** — content_storage_windows_network_drive_smb_cifs, content_storage_windows_network_drive_home_storage, content_storage_windows_network_drive_scratch_storage [INFERRED 0.85]
 
-## Communities (32 total, 13 thin omitted)
+## Communities (61 total, 40 thin omitted)
 
-### Community 0 - "File Storage & Transfer"
-Cohesion: 0.05
-Nodes (57): File Storage and Transfer, Archive and Compression, bzip2/bunzip2, gzip/gunzip, tar, Storage Environment variables, $HOME, $RCAC_SCRATCH (+49 more)
+### Community 0 - "Playbooks Conda Open"
+Cohesion: 0.14
+Nodes (38): Gateway / Open OnDemand, conda/anaconda modules (2026.03, 2025.09, etc.), DefMemPerCPU 7168 MB, external module (required before conda/anaconda), standby QOS (4-hour preemptible cap), rcac (sticky module), G1: external before conda (cannot be loaded as requested), G10: command not found / import error (exit 127/1) (+30 more)
 
-### Community 1 - "Live Snapshot, Modules & Gotchas"
-Cohesion: 0.07
-Nodes (49): Gilbreth Live Cluster Snapshot, module conda/2026.03 (Miniforge), module external (prerequisite tier, not sticky), module gcc/11.5.0 (default), Slurm MaxArraySize = 1001, module openmpi/4.1.6 (default), partition a100-80gb (A100 80GB), partition h100 (2x H100) (+41 more)
-
-### Community 2 - "Cluster Overview & Hardware"
-Cohesion: 0.06
-Nodes (39): Gilbreth Overview, Nvidia A100 GPU, Nvidia A10 GPU, Nvidia A30 GPU, Gilbreth Community Cluster, Nvidia H100 GPU, Intel MPI (impi), Intel compiler (intel/17.0.1.132) (+31 more)
-
-### Community 3 - "Access & Authentication"
-Cohesion: 0.08
-Nodes (33): Accounts on Gilbreth, Purdue Career Account, gilbreth.rcac.purdue.edu (SSH front-end), Purdue MFA two-factor authentication, MobaXterm SSH client, Request for Privileges (R4P), SSH (Secure Shell) login, SSH key-based authentication (+25 more)
-
-### Community 4 - "Partitions & OpenMP Job Types"
+### Community 1 - "Storage Home Scratch"
 Cohesion: 0.10
-Nodes (26): OpenMP, OMP_NUM_THREADS, Slurm accounts, partitions, and QOS options, NVIDIA A100 GPU (40GB), A100-40GB partition, NVIDIA A100 GPU (80GB), A100-80GB partition, NVIDIA A10 GPU (24GB) (+18 more)
+Nodes (32): File Storage and Transfer, Archive and Compression, bzip2/bunzip2, gzip/gunzip, tar, Environment variables, $HOME, $RCAC_SCRATCH (+24 more)
 
-### Community 5 - "Compiling & Toolchains"
-Cohesion: 0.15
-Nodes (24): Compiling Source codes on Gilbreth, Compiling GPU Programs, CUDA, cuda/12.6.0 module, gcc/11.4.1 module, nvcc (CUDA compiler driver), Compiling Hybrid Programs, Intel MKL Library (+16 more)
-
-### Community 6 - "Python/Conda Environments"
+### Community 2 - "Content Gpu Gilbreth"
 Cohesion: 0.10
-Nodes (23): Managing Environments with Conda, conda create, module load conda, source activate / deactivate, Example: Create and Use Biopython Environment with Conda, conda-env-mod, module load use.own, Installing Packages (+15 more)
+Nodes (23): Compiling GPU Programs, CUDA, cuda module, nvcc compiler driver, Intel MKL Library, Rationale: dynamic linking of libguide, LINK_LAPACK linking variable, MKL_HOME environment variable (+15 more)
 
-### Community 7 - "MATLAB Parallel & Python"
+### Community 3 - "Gateway Interactive Fix"
 Cohesion: 0.12
-Nodes (18): Matlab (overview), matlab_licenses command, matlab module, Profile Manager (MATLAB), MATLAB Cluster Profile, myslurmprofile.settings, Parallel Toolbox (spmd), MATLAB Distributed Computing Server (DCS) (+10 more)
+Nodes (18): Firefox lock file cleanup fix, Jupyter database-is-locked fix, Using Gateway (Open OnDemand) on Gilbreth, Cluster Tools, Shell app (web terminal), Files app, 100 GB browser upload limit, Interactive Apps (+10 more)
 
-### Community 8 - "Ansys Fluent (CFD)"
+### Community 4 - "Dynamic Gilbreth Partition"
+Cohesion: 0.15
+Nodes (17): Biography of Lillian Moller Gilbreth, Lillian Moller Gilbreth (namesake), Gilbreth Live Cluster Snapshot, MaxArraySize 1001 (Slurm limit), a10 partition (3x A10 24GB), a100-80gb partition (80GB cards), h100 partition (2x H100), normal QOS (14-day walltime) (+9 more)
+
+### Community 5 - "Jobs Slurm Submission"
+Cohesion: 0.14
+Nodes (17): GPU Usage Monitoring, GPU Usage Monitor Tool (get_gpu_util), Holding/Releasing a Job (scontrol hold|release), Interactive Jobs (sinteractive), Slurm Job Dependencies (--dependency=after|afterok|afternotok|afterany), Custom ML Packages (conda-env-mod install), ML Batch Job (tensor_hello.sub), Checking Job Status (squeue/scontrol show job) (+9 more)
+
+### Community 6 - "Content Job Sbatch"
+Cohesion: 0.13
+Nodes (16): Simple Job, --gpus-per-node requirement, a10 partition, sbatch command (simple job), standby queue, Submitting a Job, Account and Partition requirement, --nodes and --ntasks (+8 more)
+
+### Community 7 - "Jobs Packages Conda"
 Cohesion: 0.16
-Nodes (18): Calculation with Fluent, Fluent TUI, Ansys Fluent - RCAC Documentation, Ansys software, ansys module (ansys/2022R1), Ansys Fluent (CFD), rcac-runwb2 command, ThinLinc remote desktop (+10 more)
+Nodes (14): Example Jobs index, Installing R Packages, R_LIBS_USER install directory, Loading Data into R (read.csv), Example python job (hello world, matrix, sine plot), Setting Up R Preferences with .Rprofile, RStudio launch (module load rstudio / app menu), Running R jobs (R --vanilla --no-save) (+6 more)
 
-### Community 9 - "R / Statistics"
+### Community 8 - "Content Programs Compiling"
+Cohesion: 0.27
+Nodes (12): Compiling Hybrid Programs, mpiifort compiler, Compiling MPI Programs, Intel MPI (IMPI), mpiicc compiler wrapper, OpenMPI, Compiling OpenMP Programs, -fopenmp GNU flag (+4 more)
+
+### Community 9 - "Jobs Fluent Journal"
 Cohesion: 0.18
-Nodes (14): Installing R Packages, gdal/geos modules (R deps), install.packages() function, R_LIBS_USER env var, r module (r/4.4.1), Loading Data into R, read.csv() function, Setting Up R Preferences with .Rprofile (+6 more)
+Nodes (12): Running jobs, Submitting Fluent jobs to SLURM, ansys/2022R1 module, Fluent SLURM sbatch script, Fluent Text User Interface and Journal File, Fluent CLI flags (3ddp -t -g -i), Fluent journal file (.jou), Rationale: journal command order is critical (+4 more)
 
-### Community 10 - "Implicit Parallelism & Threading"
-Cohesion: 0.19
-Nodes (14): Numpy Parallel Behavior, Intel MKL library, MKL_NUM_THREADS / OMP_NUM_THREADS, Implicit Parallelism, exclusive node access for implicit parallelism, matlab -singleCompThread, Matlab Script (.m File), module load matlab (+6 more)
-
-### Community 11 - "MPI Jobs"
-Cohesion: 0.18
-Nodes (13): Collecting System Resource Utilization Data, htop, monitor utility, mpiexec command, MPI Jobs, Intel MPI (IMPI), --mpi=pmi2 option (Intel IMPI), OpenMPI (+5 more)
-
-### Community 12 - "FAQ & GPU Selection"
+### Community 10 - "Content Compiling Open"
 Cohesion: 0.22
-Nodes (11): Frequently Asked Questions - Gilbreth, Nvidia A100-40GB GPU, Nvidia A100-80GB GPU, Nvidia A10 GPU, Nvidia A30 GPU, Firefox lock file issue, Nvidia H100 GPU, lstopo-no-graphics (NUMA layout) (+3 more)
+Nodes (11): Compiling Source codes on Gilbreth, Compiling GPU/CUDA (nvcc), Compiling hybrid MPI+OpenMP, Intel MKL Library linking, Compiling MPI (mpicc/mpif90/mpiicc), Compiling OpenMP (-fopenmp/-qopenmp), Compiling serial (gcc/ifx/icx), Default toolchain (gcc 11.5.0 + openmpi 4.1.6 + cuda 12.6.0) (+3 more)
 
-### Community 13 - "Gaussian & GPU Monitoring"
-Cohesion: 0.22
-Nodes (10): Gaussian, Gaussian 16 (gaussian16 module), --gres=gpu / --gpus-per-node directive, subg16 submission script, GPU, CUDA_VISIBLE_DEVICES, sfeatures command, GPU Usage Monitoring (+2 more)
+### Community 11 - "Provenance Extract Workflow"
+Cohesion: 0.20
+Nodes (8): chunks, edges, fail, files, meta, nodes, ok, SCHEMA
 
-### Community 14 - "Capture Swarm Script"
+### Community 12 - "Provenance Workflow Capture"
 Cohesion: 0.22
 Nodes (7): clean, fail, meta, ok, SUMMARY_SCHEMA, totalWords, urls
 
-### Community 15 - "Windows Shares & Snapshots"
-Cohesion: 0.38
-Nodes (7): Manual Browsing, Samba/SMB/CIFS mount, /depot/.snapshots directory, Windows network drive, SMB/CIFS protocol, smbclient command, Purdue campus network / VPN requirement for SMB
+### Community 13 - "Content Storage Smb"
+Cohesion: 0.29
+Nodes (8): Windows Credential Manager manual credential, Windows network drive, Fortress archival storage, Gilbreth home directory storage, Gilbreth scratch space storage, SMB/CIFS file transfer protocol, smbclient command-line SMB tool, Purdue campus network or VPN requirement for SMB access
 
-### Community 16 - "Job Control & Dependencies"
-Cohesion: 0.50
-Nodes (4): Holding a Job, scontrol hold/release job, Job dependencies, sbatch --dependency (after/afterok/afternotok/afterany)
+### Community 14 - "Jobs Ansys Fluent"
+Cohesion: 0.29
+Nodes (7): Calculation with Fluent, FFF-1.cas.gz case file, Ansys Fluent Launcher, Preparing Case Files for Fluent, Ansys DesignModeler geometry, Ansys Meshing (FFF.msh), Ansys Workbench (.wbpj)
 
-### Community 18 - "Interactive & Generic Jobs"
+### Community 15 - "Jobs Matlab Parallel"
+Cohesion: 0.57
+Nodes (7): MATLAB on Gilbreth (overview & licenses), MATLAB Implicit Parallelism (-singleCompThread), MATLAB Script .m File (serial matlab -r), MATLAB Distributed Computing Server Parallel Job (labBroadcast/spmd), MATLAB Parallel Computing Toolbox parfor Job, MATLAB Cluster Profile Manager (myslurmprofile), MATLAB Parallel Toolbox spmd Job
+
+### Community 16 - "Content Ssh Accounts"
+Cohesion: 0.40
+Nodes (6): Accounts on Gilbreth, Community cluster purchase access, SSH keys, SSH login (Career Account + BoilerKey/MFA), ThinLinc remote desktop, SSH X11 forwarding
+
+### Community 17 - "Content Directives Job"
+Cohesion: 0.33
+Nodes (6): Canceling a Job (scancel), Checking Job Output (slurm-<jobid>.out), --output / --error directives, Directives (#SBATCH syntax), Partition/QOS in directives (--partition=a30 --qos=standby), Generic SLURM Jobs index
+
+### Community 18 - "Content Gres Gpu"
 Cohesion: 0.67
-Nodes (3): Generic SLURM Jobs, Interactive Jobs, sinteractive command
+Nodes (4): Gaussian example (subg16, gaussian16 module), subg16 submission wrapper (--gres=gpu:1), GPU job example (cuda, --gres=gpu:1), GPU request (--gres=gpu:1 / --gpus-per-node / --gpus-per-task)
 
-### Community 19 - "Job Status Checking"
+### Community 20 - "Content Ansys Example"
 Cohesion: 0.67
-Nodes (3): Checking Job Status, scontrol show job command, squeue -u command
+Nodes (3): Ansys Fluent example, Ansys module (module load ansys), rcac-runwb2 launcher (Ansys Workbench project in scratch)
+
+### Community 21 - "Content Apptainer Container"
+Cohesion: 0.67
+Nodes (3): Apptainer container example, Apptainer image build (apptainer build .sif Buildfile / --sandbox), Apptainer overlay paths (/apps /scratch /depot /home)
 
 ## Knowledge Gaps
-- **142 isolated node(s):** `learn_from_failure.sh script`, `meta`, `urls`, `SUMMARY_SCHEMA`, `clean` (+137 more)
+- **148 isolated node(s):** `learn_from_failure.sh script`, `meta`, `urls`, `SUMMARY_SCHEMA`, `clean` (+143 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **40 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Running jobs` connect `Cluster Overview & Hardware` to `Ansys Fluent (CFD)`?**
+- **Why does `Slurm batch scheduler` connect `Content Gpu Gilbreth` to `Jobs Fluent Journal`, `Gateway Interactive Fix`?**
   _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **Why does `Ansys Fluent - RCAC Documentation` connect `Ansys Fluent (CFD)` to `Cluster Overview & Hardware`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `Preflight Verification Checklist` connect `Playbooks Conda Open` to `Dynamic Gilbreth Partition`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **What connects `learn_from_failure.sh script`, `meta`, `urls` to the rest of the system?**
-  _145 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `File Storage & Transfer` be split into smaller, more focused modules?**
-  _Cohesion score 0.05012531328320802 - nodes in this community are weakly interconnected._
-- **Should `Live Snapshot, Modules & Gotchas` be split into smaller, more focused modules?**
-  _Cohesion score 0.06887755102040816 - nodes in this community are weakly interconnected._
-- **Should `Cluster Overview & Hardware` be split into smaller, more focused modules?**
-  _Cohesion score 0.0620782726045884 - nodes in this community are weakly interconnected._
-- **Should `Access & Authentication` be split into smaller, more focused modules?**
-  _Cohesion score 0.08143939393939394 - nodes in this community are weakly interconnected._
+  _153 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Playbooks Conda Open` be split into smaller, more focused modules?**
+  _Cohesion score 0.14082503556187767 - nodes in this community are weakly interconnected._
+- **Should `Storage Home Scratch` be split into smaller, more focused modules?**
+  _Cohesion score 0.0967741935483871 - nodes in this community are weakly interconnected._
+- **Should `Content Gpu Gilbreth` be split into smaller, more focused modules?**
+  _Cohesion score 0.09881422924901186 - nodes in this community are weakly interconnected._
+- **Should `Gateway Interactive Fix` be split into smaller, more focused modules?**
+  _Cohesion score 0.12418300653594772 - nodes in this community are weakly interconnected._

@@ -16,7 +16,7 @@ workload's specific pitfalls. The agent picks one after classifying the task (se
 
 | Workload | Playbook | Key gotchas |
 |---|---|---|
-| ML / DL training (PyTorch, lerobot, pi0, VLA, vLLM serving) | [`ml_training.md`](ml_training.md) | G1,G4,G6,G7,G8,G9,G11,G12 |
+| ML / DL training and LLM serving (PyTorch, lerobot, pi0, VLA, vLLM, tensor-parallel serving) | [`ml_training.md`](ml_training.md) | G1,G4,G6,G7,G8,G9,G11,G12,G13,G15,G16 |
 | Python / Conda environments | [`python_conda.md`](python_conda.md) | G1,G2,G6,G7,G9 |
 | Job arrays (sweeps) | [`job_arrays.md`](job_arrays.md) | G4,G8,G11,G14 |
 | Interactive jobs (debug on a node) | [`interactive_jobs.md`](interactive_jobs.md) | G1,G4 |

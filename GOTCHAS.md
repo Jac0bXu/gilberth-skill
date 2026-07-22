@@ -186,6 +186,41 @@ concurrency with `%N` (e.g. `--array=0-999%20`) to stay within submit limits.
 
 ---
 
+## G15 — vLLM tensor parallel on one node is one server process, not `torchrun` `[LOG]`
+
+**Symptom:** a two-GPU LLM serving job starts extra ranks, binds ports oddly, or each rank tries to
+load the whole model.
+**Cause:** vLLM's OpenAI server manages tensor-parallel workers internally when launched with
+`--tensor-parallel-size N`. Starting it with `torchrun`, `srun -n N`, or `#SBATCH --ntasks=N`
+changes the process topology and is usually wrong for single-node serving.
+**Fix:** request multiple GPUs but keep one Slurm task:
+```bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gpus-per-node=2
+CUDA_VISIBLE_DEVICES=0,1 python -m vllm.entrypoints.openai.api_server \
+  --model <model> --tensor-parallel-size 2 --host 0.0.0.0 --port 8000
+```
+Use `TEMPLATES/vllm_tp2.sub` for the complete Gilbreth script.
+
+---
+
+## G16 — vLLM OpenAI tool calling may need explicit parser flags `[LOG]`
+
+**Symptom:** OpenAI-compatible clients receive plain text like `<tool_call>...</tool_call>` instead
+of a structured `tool_calls` field, or the server rejects automatic tool choice.
+**Cause:** vLLM requires model-specific tool-call parsing to convert generated tool syntax into the
+OpenAI API response shape.
+**Fix:** start vLLM with tool-choice parsing enabled. For Qwen3:
+```bash
+--enable-auto-tool-choice --tool-call-parser qwen3_xml
+```
+Then run a small production-shaped tool-call smoke test through the same profile the workload will
+use. If `tool_choice=auto` still returns text instead of `tool_calls`, set client/profile
+`tool_choice` to `required` for tool-call requests.
+
+---
+
 ## Also see
 - `content/faqs.md` — RCAC's own FAQ (GPU partition selection, NUMA layout, Jupyter "database is locked", Firefox lock files).
 - `DYNAMIC/cluster_snapshot.md` — live modules, limits, partitions, QOS.

@@ -1,11 +1,11 @@
 ---
 section: playbook
 slug: playbooks/ml_training
-title: Playbook — ML / Deep-Learning Training (lerobot, pi0, VLA, PyTorch)
+title: Playbook — ML / Deep-Learning Training and LLM Serving (lerobot, pi0, VLA, PyTorch, vLLM)
 workload: ml_training
 ---
 
-# Playbook: ML / Deep-Learning Training
+# Playbook: ML / Deep-Learning Training and LLM Serving
 
 Use when the task is **training or fine-tuning a model on GPU** (PyTorch, lerobot/pi0, VLA,
 diffusion, any deep-learning loop). For *serving* a model (vLLM, TGI) see the "Serving" note at
@@ -104,6 +104,54 @@ tail -f /home/$USER/logs/mytrain-NNNN.out
 Same skeleton, but (a) budget **extra walltime for startup** — compile + CUDA-graph capture for big
 models takes minutes (G13); (b) set `--enforce-eager` while debugging; (c) use `a100-80gb`/`h100`
 for ≥40 GB models; (d) bind the server port and keep the job alive (`--time` generous, `normal` QOS).
+
+### vLLM on two GPUs in parallel (single-node tensor parallel)
+
+Use this when one GPU does not have enough VRAM for the model, but one Gilbreth node has two
+same-type GPUs available. This is **single-node tensor parallelism**, not data parallelism.
+
+Key pattern:
+- Request one node and two GPUs: `#SBATCH --nodes=1` and `#SBATCH --gpus-per-node=2`.
+- Keep one Slurm task: `#SBATCH --ntasks=1`. Do **not** use `torchrun` or `srun -n 2` for vLLM
+  serving unless you are deliberately building a multi-process serving topology.
+- Launch one vLLM server process with `--tensor-parallel-size 2`.
+- Pin visible devices for clarity: `CUDA_VISIBLE_DEVICES=0,1`.
+- Prefer `a100-40gb`, `a100-80gb`, or `h100`; both visible GPUs should be the same type.
+- For OpenAI-compatible tool calling, add vLLM parser flags when the model supports them. For
+  Qwen3, use `--enable-auto-tool-choice --tool-call-parser qwen3_xml`. If the client still emits
+  plain XML-like tool text under `tool_choice=auto`, set the client/profile `tool_choice` to
+  `required` for tool-call requests.
+
+Copy `TEMPLATES/vllm_tp2.sub` for a known-good Slurm shape. It uses:
+
+```bash
+#SBATCH --partition=a100-40gb
+#SBATCH --qos=normal
+#SBATCH --gpus-per-node=2
+#SBATCH --ntasks=1
+
+CUDA_VISIBLE_DEVICES=0,1 \
+python -m vllm.entrypoints.openai.api_server \
+  --host 0.0.0.0 \
+  --port 8000 \
+  --model Qwen/Qwen3-32B \
+  --tensor-parallel-size 2 \
+  --enable-auto-tool-choice \
+  --tool-call-parser qwen3_xml
+```
+
+After the job starts, tunnel from the workstation through the Gilbreth login node to the compute
+node printed by `squeue`:
+
+```bash
+NODE="$(ssh gil "squeue -h -j <jobid> -o '%N'")"
+ssh -N -o ExitOnForwardFailure=yes -L 8000:${NODE}:8000 gil
+curl -sf http://127.0.0.1:8000/health
+curl -s http://127.0.0.1:8000/v1/models
+```
+
+If the job is pending, check whether the lab GPU quota is full before changing the script. If the
+job runs but `curl /health` hangs, tail the vLLM log; slow startup during CUDA graph capture is G13.
 
 ## Preflight (run before returning the script to the user)
 See `PREFLIGHT.md` — the agent must verify every item, including `sbatch --test-only train.sub`.
